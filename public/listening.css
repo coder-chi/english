@@ -1,0 +1,329 @@
+.listen-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-block: 18px;
+  border-block: 1px solid var(--line);
+}
+.listen-import {
+  margin-left: auto;
+}
+.listen-import summary {
+  cursor: pointer;
+  color: var(--green);
+  font-weight: 600;
+}
+.listen-import[open] {
+  width: 100%;
+  margin-left: 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.listen-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.listen-form .wide {
+  grid-column: 1 / -1;
+}
+.listen-form label,
+.listen-filter label,
+.listen-note > label:not(.listen-checkbox) {
+  display: grid;
+  gap: 7px;
+  color: #51644f;
+  font-size: 12px;
+}
+.listen-form input,
+.listen-filter input,
+.listen-filter select,
+.listen-note textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #dce2d6;
+  background: #fcfdf9;
+  color: var(--ink);
+  border-radius: 5px;
+  padding: 11px 12px;
+  font-size: 14px;
+}
+.listen-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 28px 0 22px;
+  border-block: 1px solid var(--line);
+}
+.listen-stats div {
+  padding: 18px 12px;
+  border-right: 1px solid var(--line);
+}
+.listen-stats div:last-child {
+  border-right: 0;
+}
+.listen-stats strong,
+.listen-stats span {
+  display: block;
+}
+.listen-stats strong {
+  font: 30px var(--serif);
+  color: var(--green);
+}
+.listen-stats span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.listen-filter {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.listen-filter label:first-child {
+  flex: 1;
+}
+.listen-list {
+  border-top: 2px solid var(--green);
+}
+.listen-row {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 84px;
+  border-bottom: 1px solid var(--line);
+}
+.listen-check {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #aab7a2;
+  border-radius: 4px;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+}
+.listen-check.checked {
+  border-color: var(--green);
+  background: var(--green);
+}
+.listen-row-main {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  padding: 18px 0;
+  border: 0;
+  background: none;
+  text-align: left;
+}
+.listen-row-main strong {
+  color: var(--green);
+  font: 20px/1.3 var(--serif);
+  overflow-wrap: anywhere;
+}
+.listen-row-main span {
+  color: var(--muted);
+  font-size: 12px;
+}
+.listen-row-state {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+.listen-row-state span,
+.listen-detail-actions > span {
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  color: #657261;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.listen-detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 18px;
+  border-block: 1px solid var(--line);
+}
+.listen-note {
+  display: grid;
+  gap: 18px;
+  max-width: 860px;
+  padding: 30px 0 34px;
+}
+.listen-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  color: var(--green);
+  font-weight: 600;
+}
+.listen-checkbox input {
+  width: 19px;
+  height: 19px;
+  accent-color: var(--green);
+}
+.listen-note textarea {
+  min-height: 210px;
+  resize: vertical;
+  line-height: 1.8;
+}
+.listen-note .button {
+  justify-self: start;
+}
+.listen-simple-section,
+.listen-transcript {
+  max-width: 860px;
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+}
+.listen-simple-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.listen-simple-section h2 {
+  font-size: 17px;
+}
+.listen-simple-section p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.listen-transcript summary {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--green);
+  font-weight: 600;
+}
+.listen-transcript summary strong {
+  font-size: 12px;
+}
+.listen-transcript-meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 18px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.listen-transcript-form label {
+  display: grid;
+  gap: 8px;
+  color: #51644f;
+  font-size: 12px;
+}
+.listen-transcript-form textarea {
+  width: 100%;
+  min-height: 360px;
+  resize: vertical;
+  border: 1px solid #dce2d6;
+  border-radius: 5px;
+  padding: 16px;
+  background: #fcfdf9;
+  color: var(--ink);
+  font: 16px/1.9 var(--serif);
+}
+.listen-transcript-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+.listen-keywords {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.listen-keywords h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.listen-keywords article {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.listen-keywords article > div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.listen-keywords strong {
+  color: var(--green);
+  font: 19px var(--serif);
+}
+.listen-keywords article span,
+.listen-keywords article small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.listen-keywords article p {
+  margin-top: 7px;
+  font-size: 13px;
+}
+.listen-keywords blockquote {
+  margin: 8px 0;
+  padding-left: 12px;
+  border-left: 2px solid #b9c99f;
+  color: #657261;
+  font-size: 12px;
+  line-height: 1.7;
+}
+@media (min-width: 901px) {
+  .sidebar {
+    overflow-y: auto;
+  }
+  .sidebar-note {
+    flex-shrink: 0;
+  }
+}
+@media (max-width: 680px) {
+  .listen-toolbar {
+    align-items: flex-start;
+  }
+  .listen-import {
+    width: 100%;
+    margin-left: 0;
+  }
+  .listen-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .listen-stats div:nth-child(2) {
+    border-right: 0;
+  }
+  .listen-form {
+    grid-template-columns: 1fr;
+  }
+  .listen-form .wide {
+    grid-column: auto;
+  }
+  .listen-filter {
+    flex-wrap: wrap;
+  }
+  .listen-filter label:first-child {
+    flex-basis: 100%;
+  }
+  .listen-row {
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    padding: 14px 0;
+  }
+  .listen-row-main {
+    padding: 0;
+  }
+  .listen-row-state {
+    grid-column: 2;
+    justify-content: start;
+  }
+  .listen-simple-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

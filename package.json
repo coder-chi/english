@@ -1,0 +1,30 @@
+{
+  "name": "small-steps-english",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch server/index.js",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "build:lexicon": "python3 scripts/build_ielts_lexicon.py",
+    "test:e2e": "playwright test",
+    "format": "prettier --write public server e2e playwright.config.js package.json README.md",
+    "precheck": "node --check server/practice-flow.js && node --check server/flow-readings.js && node --check public/learning-progress.js && node --check server/learning-hub.js && node --check public/learning-hub.js && node --check server/association-catalog.js && node --check server/associations.js && node --check public/associations.js",
+    "check": "node --check server/listening.js && node --check server/listening-fetch.js && node --check server/listening-extract.js && node --check server/listening-keywords.js && node --check server/listening-resources.js && node --check server/listening-pdf.js && node --check server/listening-youtube-worker.js && node --check public/listening.js && node --check server/knowledge-index.js && node --check server/knowledge.js && node --check public/knowledge.js && node --check server/review-reading.js && node --check public/review-reading.js && node --check server/index.js && node --check server/parts-of-speech.js && node --check server/curated-parts-of-speech.js && node --check server/vocabulary-metadata.js && node --check server/scheduler.js && node --check server/repetition.js && node --check server/services.js && node --check server/notebook.js && node --check server/wordbooks.js && node --check server/wordbook-catalog.js && node --check server/ielts-wordbook.js && node --check server/store.js && node --check server/seed.js && node --check public/app.js && node --check public/notebook.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "fast-xml-parser": "^5.5.0",
+    "get-youtube-transcript": "^1.0.0",
+    "pdfjs-dist": "^5.4.624",
+    "ts-fsrs": "5.4.2",
+    "undici": "^8.11.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "prettier": "^3.9.9"
+  }
+}

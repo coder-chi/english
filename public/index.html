@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#244c3c" />
+    <title>Small Steps · 每天一点英语</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/notebook.css" />
+    <link rel="stylesheet" href="/knowledge.css" />
+    <link rel="stylesheet" href="/review-reading.css" />
+    <link rel="stylesheet" href="/listening.css" />
+    <link rel="stylesheet" href="/learning-hub.css" />
+    <script src="/app.js" type="module"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="loading">Small Steps<span>正在打开你的英语手册…</span></div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="reader" aria-label="英语阅读">
+      <div id="reader-content"></div>
+    </dialog>
+    <dialog id="article-import" aria-label="同步指定文章"></dialog>
+    <dialog id="source-reader" aria-label="文章精读与标注">
+      <div id="source-reader-content"></div>
+    </dialog>
+    <dialog id="notebook-dialog" aria-label="生词本设置"></dialog>
+  </body>
+</html>
